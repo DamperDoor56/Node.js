@@ -4,10 +4,9 @@ const app = express();
 const port = 3000
 
 //Motor de plantillas
-
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
-
+app.use(express.static(__dirname + '/public'));
 
 
 app.get('/', (req, res) => {

@@ -1,4 +1,32 @@
 body{
+    margin: 0;
     font-family: monospace;
-    color: saddlebrown;
+    color: rgb(223, 223, 223);
+    background-color: rgb(70, 70, 70);
+} 
+.navbar{
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    font-size: 20px;
+}
+.navbar .links{
+    padding: 25px 40px 0;
+    text-decoration: none;
+    color: rgb(223, 223, 223);
+}
+.navbar .links a{
+    text-decoration: none;
+    color: rgb(223, 223, 223);
+    padding: 0 1rem 0 1rem;
+}
+.navbar .tituls{
+    font-size: 18px;
+    padding: 0 0 20px 20px;
+}
+
+@media screen and (max-width:600px) {
+    
 }
