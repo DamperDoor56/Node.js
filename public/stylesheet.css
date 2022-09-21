@@ -8,25 +8,48 @@ body{
     background-color: #111;
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 55px;
     width: 100%;
     font-size: 20px;
 }
-.navbar .links{
-    padding: 25px 40px 0;
+.navbar .username-pic{
+    cursor: pointer;
+    font-size: 15px;
+    height: 25px;
+    padding: 0.5rem 1rem;
+    margin: 8px 15px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    color: rgb(68, 68, 68);
+    transition: all 0.5s ;
+}
+.navbar .username-pic:hover{
+    border: 0.2px solid rgb(68, 68, 68);
+}
+.navbar .username-pic :nth-child(3){
+    vertical-align: super;
+    padding-left: 40px;
+}
+.navbar .username-pic img{ 
+    width: 25px;
+    display: inline;
+}
+.navbar .username-pic p{
+    display: inline;
+    vertical-align: top;
     text-decoration: none;
     color: rgb(223, 223, 223);
 }
-.navbar .links a{
-    text-decoration: none;
-    color: rgb(223, 223, 223);
-    padding: 0 1rem 0 1rem;
-}
-.navbar .tituls{
+.navbar .tituls h2{
     font-size: 18px;
-    padding: 0 0 20px 20px;
+    padding: 0 0 25px 20px;
 }
 
-@media screen and (max-width:600px) {
-    
+@media screen and (max-width:305px) {
+    .navbar .username-pic :nth-child(3){
+        padding-left: 0;
+    }
+    .navbar .username-pic p{
+        display: none;
+    }
 }
