@@ -8,14 +8,8 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
-
-app.get('/', (req, res) => {
-    res.render('index', {titulo: "mi titulo dinamico uwu"})
-})
-
-app.get('/servicios', (req, res) => {
-    res.render("servicios", {tituloServicios: "Un mensaje dinamico de servicios" })
-})
+//Rutas web
+app.use('/api', require('./router/rutitas'));
 
 app.use((req, res, next) =>{
     res.status(404).render("404", {
