@@ -1,0 +1,27 @@
+<%- include("template/cabecera" , {tituloWeb: 'Pagina de Publicaciones'})  %>  
+    <body>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr scope="col">id</tr>
+                    <tr scope="col">Titulo</tr>
+                    <tr scope="col">Descripcion</tr>
+                </thead>
+                <tbody>
+                    <% if(arrayPublicaciones.lenght > 0) { %>
+                       <% arrayPublicaciones.forEach(publicacion => { %>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+
+                        <% }) %>
+                    <% } %>
+                   
+                </tbody>
+            </table>
+           
+        </div>
+        <%- include("template/footer") %>  
