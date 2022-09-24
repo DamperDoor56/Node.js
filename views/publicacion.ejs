@@ -8,16 +8,14 @@
                     <tr scope="col">Descripcion</tr>
                 </thead>
                 <tbody>
-                    <% if(arrayPublicaciones.lenght > 0) { %>
-                       <% arrayPublicaciones.forEach(publicacion => { %>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-
-                        <% }) %>
+                    <% if (arrayPublicaciones.length > 0) { %>
+                     <% arrayPublicaciones.forEach(publicacion => { %>
+                        <tr>
+                            <th scope="row"><%= publicacion.id %></th>
+                            <td><%= publicacion.Titulo %></td>
+                            <td><%= publicacion.Descripcion %></td>
+                        </tr>
+                     <% }) %>
                     <% } %>
                    
                 </tbody>
