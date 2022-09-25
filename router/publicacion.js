@@ -1,14 +1,21 @@
 const express = require('express');
 const router = express.Router();
+const publicacion = require('../models/Publicacion');
 
-router.get('/', (req, res) =>{
-    res.render("publicacion", {
-        arrayPublicaciones : [
-            {id: '1', titulo : 'Etecse', descripcion: 'Pepe'},
-            {id: '2', titulo : 'Esteo', descripcion: 'LKJDLKSJ'},
-            {id: '3', titulo : 'Numesale',  descripcion: 'Agente47'}
-        ]
+router.get('/', async (req, res) =>{
+
+    try{
+        const arraypublicacionesDB = await publicacion.find()
+        console.log(arraypublicacionesDB)
+
+         res.render("publicacion", {
+            arrayPublicaciones : arraypublicacionesDB
     })
+    } catch(error){
+        console.log(error)
+    }
+
+   
 })
 
 module.exports = router;

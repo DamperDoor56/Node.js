@@ -45,9 +45,20 @@ body{
     padding: 0 0 25px 20px;
 }
  /*Table */
+ .container{
+    display: flex;
+    justify-content: center;
+ }
 .table{
     display: flex;
+    border: 3px solid red;
+    flex-direction: column;
 }
+.table thead{
+    display: flex;
+    justify-content: space-around;
+}
+
 
 /* Mobile */
 @media screen and (max-width:305px) {
