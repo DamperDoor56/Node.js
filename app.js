@@ -6,14 +6,16 @@ const port = process.env.PORT || 3000;
 //Conexion a base de datos
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/test',
-     {useNewUrlParser: true, useUnifiedTopology: true}
-);
-
 const user = '';
 const password = '';
-const uri = '';
+const uri = 'localhost:3000';
 
+mongoose.connect(uri,
+    { useNewUrlParser: true, useUnifiedTopology: true }
+    )
+    .then(() => console.log('Base de datos conectada'))
+    .catch(e => console.log(e))
+ 
 //Motor de plantillas
 app.set('view engine', 'ejs');
 app.set('views', __dirname + "/views");
