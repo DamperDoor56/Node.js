@@ -23,6 +23,7 @@ body{
     text-decoration: none;
     border-radius: 5px;
     color: rgb(68, 68, 68);
+    border: 0.2px solid transparent;
     transition: all 0.5s ;
 }
 .navbar .username-pic:hover{
