@@ -3,15 +3,16 @@
     <body>
         <div class="container-crear">
             <h1>Crear</h1>
-            <form action="" class="form-good">
-                <input type="text" name=""
-                placeholder="Publica un titulo"
-                >
+            <form action="/publicacion" class="form-good"
+            method="POST"> 
+                <input type="text" name="titulo"
+                placeholder="Publica un titulo">
                 <input type="text"
                 placeholder="Publica una descripcion"
-                >
-                <button type="submit">Publicar</button>
+                name="descripcion">
+                <button type="submit">Submit</button>
             </form>
         </div>
 
 <%- include("template/footer") %>  
+<!-- *Method = POST to use router.post -->

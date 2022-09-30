@@ -21,7 +21,14 @@ router.get('/crear', (req, res) => {
 })
 router.post('/', async (req, res) => {
     const body = req.body
-    console.log(body)
+    try{
+        const publiDB = new publicacion(body)
+        await publiDB.save()
+
+        console.log(publiDB)
+    } catch (error){
+        console.log(error)
+    }
 })
 
 module.exports = router;

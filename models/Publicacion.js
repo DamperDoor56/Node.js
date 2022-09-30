@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const publiSchema = new Schema({
+const publiSchema = new Schema({ // El schema de mongoose 
   titulo:  String,
   descripcion: String
 });
