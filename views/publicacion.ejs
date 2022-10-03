@@ -1,28 +1,24 @@
 <%- include("template/cabecera" , {tituloWeb: 'Pagina de Publicaciones'})  %>  
     <body>
         <div class="container">
-            <a href="/publicacion/crear">
-                <button type="submit">Publica algo</button>
-            </a>
             <table class="table">
                 <thead>
-                    <tr><td>Id</td></tr>
-                    <tr><td>Titulo</td></tr>
-                    <tr><td>Descripcion</td></tr>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Descripcion</th>
+                </tr>
                 </thead>
                 <tbody>
                     <% if (arrayPublicaciones.length > 0) { %>
-                     <% arrayPublicaciones.forEach(publicacion => { %>
-                        <tr>
-                            <th scope="row"><%= publicacion.id %></th>
-                            <td><%= publicacion.titulo %></td>
-                            <td><%= publicacion.descripcion %></td>
-                        </tr>
-                     <% }) %>
-                    <% } %>
-                   
+                        <% arrayPublicaciones.forEach(publicacion => { %>
+                           <tr>
+                               <td><%= publicacion.titulo %></td>
+                               <td><%= publicacion.descripcion %></td>
+                           </tr>
+                        <% }) %>
+                       <% } %>
                 </tbody>
             </table>
-           
+                <button type="submit"><a href="/publicacion/crear">Publica algo</a></button>
         </div>
         <%- include("template/footer") %>  
