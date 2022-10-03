@@ -49,14 +49,15 @@ body{
 }
  /*Table*/
 
-button{
+.submit{
     margin-top: 2%;
     width: 20%;
     height: 30px;
     border: none;
+    background-color: green;
     border-radius: 5px;
 }
-button a {
+.submit a {
     color: #111;
     text-decoration: none;
 }
