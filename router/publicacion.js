@@ -16,10 +16,11 @@ router.get('/', async (req, res) =>{
     }
 })
 
-router.get('/crear', (req, res) => {
+router.get('/crear', (req, res) => { //Ruta de creacion
     res.render('crear')
 })
-router.post('/', async (req, res) => {
+
+router.post('/', async (req, res) => { //Datos de publicacion
     const body = req.body
     try{
         const publiDB = new publicacion(body)
@@ -28,6 +29,27 @@ router.post('/', async (req, res) => {
         console.log(publiDB)
     } catch (error){
         console.log(error)
+    }
+})
+//id
+router.get('/:id', async(req, res) =>{
+    const id = req.params.id
+
+    try{
+        const publicacionDB = await publicacion.findOne({ _id: id })
+        console.log(publicacionDB)
+
+        res.render('details',{
+            publicacion: publicacionDB,
+            error: false
+        })
+    }
+    catch(error){
+        console.log(error)
+        res.render('details',{
+            error: true,
+            message: "No se encuentra el id"
+        })
     }
 })
 

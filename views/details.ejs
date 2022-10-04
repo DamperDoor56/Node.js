@@ -1,0 +1,36 @@
+<%- include("template/cabecera" , {tituloWeb: 'Detalle de publicacion'})  %>  
+
+    <body>
+        <div class="container-details">
+            <h1>Detalles</h1>
+            <% if(error) { %>
+                <p>
+                    <%= message %> 
+                </p>
+            <% } %>
+           
+        
+        <% if (!error) { %>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Titulo</th>
+                    <th>Description</th>
+                    <th>Accion</th>
+                </tr>
+                 </thead>
+                   <tbody>
+                           <tr>
+                               <td><%= publicacion.id %></td>
+                               <td><%= publicacion.titulo %></td>
+                               <td><%= publicacion.descripcion %></td>
+                               <td>mdo@</td>
+                           </tr>
+                       </tbody>
+            </table>
+        <% } %>
+        <a href="/publicacion">Return to Home</a>
+</div>
+<%- include("template/footer") %>  
+<!-- *Method = POST to use router.post -->
