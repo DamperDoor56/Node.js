@@ -25,7 +25,7 @@
                                <td><%= publicacion.id %></td>
                                <td><%= publicacion.titulo %></td>
                                <td><%= publicacion.descripcion %></td>
-                               <td>mdo@</td>
+                               <td><button id="btnDelete">Delete</button></td>
                            </tr>
                        </tbody>
             </table>
@@ -34,3 +34,11 @@
 </div>
 <%- include("template/footer") %>  
 <!-- *Method = POST to use router.post -->
+<script>
+
+    const btnDelete = document.querySelector("#btnEliminar")
+
+    btnDelete.addEventListener('click', () =>{
+        console.log("clickiiii");
+    })
+</script>

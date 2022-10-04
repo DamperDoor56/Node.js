@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const publicacion = require('../models/Publicacion');
 
-router.get('/', async (req, res) =>{
+//Ruta de get info
+router.get('/', async (req, res) =>{ 
 
     try{
         const arraypublicacionesDB = await publicacion.find()
@@ -15,8 +16,8 @@ router.get('/', async (req, res) =>{
         console.log(error)
     }
 })
-
-router.get('/crear', (req, res) => { //Ruta de creacion
+//Ruta de creacion
+router.get('/crear', (req, res) => { 
     res.render('crear')
 })
 
@@ -25,6 +26,7 @@ router.post('/', async (req, res) => { //Datos de publicacion
     try{
         const publiDB = new publicacion(body)
         await publiDB.save()
+        res.redirect('/publicacion')
 
         console.log(publiDB)
     } catch (error){
@@ -50,6 +52,30 @@ router.get('/:id', async(req, res) =>{
             error: true,
             message: "No se encuentra el id"
         })
+    }
+})
+
+//Delete
+router.delete('/:id', async(req, res) =>{
+    const id = req.params.id
+
+    try{
+        const publicacionDB = await publicacion.findByIdAndRemove({ _id: id })
+        
+        if(publicacionDB){
+            res.json({
+                state: true,
+                message: 'succesfully deleted!'
+            })
+        } else {
+            res.json({
+                state: false,
+                message: 'succesfully deleted!'
+            })
+        }
+    }
+    catch(error){
+
     }
 })
 
