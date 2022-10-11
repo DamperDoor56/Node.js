@@ -25,7 +25,9 @@
                                <td><%= publicacion.id %></td>
                                <td><%= publicacion.titulo %></td>
                                <td><%= publicacion.descripcion %></td>
-                               <td><button id="btnDelete">Delete</button></td>
+                               <td><button 
+                                id="btnDelete"
+                                data-id="<%= publicacion.id %>">Delete</button></td>
                            </tr>
                        </tbody>
             </table>
@@ -36,9 +38,24 @@
 <!-- *Method = POST to use router.post -->
 <script>
 
+// Delete logic
     const btnDelete = document.querySelector("#btnDelete")
 
     btnDelete.addEventListener('click', async() =>{
-        console.log("clickiiii");
-    })
+        const id = btnDelete.dataset.id 
+    try {
+        const data = await fetch(`/publicacion/${btnDelete.dataset.id}`, {
+          method: 'delete'
+        })
+        const res = await data.json()
+        console.log(res)
+        if(res.estado){
+            window.location.href = '/publicacion'
+        }else{
+            console.log(res)
+        }
+    } catch (error) {
+        console.log(error)
+    }
+  })
 </script>

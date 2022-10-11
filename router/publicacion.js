@@ -58,6 +58,7 @@ router.get('/:id', async(req, res) =>{
 //Delete
 router.delete('/:id', async(req, res) =>{
     const id = req.params.id
+    console.log('id from backend', id)
 
     try{
         const publicacionDB = await publicacion.findByIdAndRemove({ _id: id })
@@ -70,7 +71,7 @@ router.delete('/:id', async(req, res) =>{
         } else {
             res.json({
                 state: false,
-                message: 'succesfully deleted!'
+                message: 'Error!'
             })
         }
     }
