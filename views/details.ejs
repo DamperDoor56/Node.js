@@ -12,7 +12,7 @@
         
         <% if (!error) { %>
 
-            <form id="formEdit">
+            <form id="formEdit" data-id="<%= publicacion.id %>">
                 <input 
                     type="text"
                     class="form-c"
@@ -69,10 +69,27 @@
   //Capture formEdit
   const formEdit = document.querySelector('#formEdit')
 
-  formEdit.addEventListener('submit', (e) => {
+  formEdit.addEventListener('submit', async(e) => {
     e.preventDefault() //Prevent refreshing
-    
-    const titulo = formEdit.elements['name'].value
-    console.log(titulo)
+
+    const titulo = document.querySelector('#tituloInput').value
+    const descripcion = document.querySelector('#descripcionInput').value
+    const id = formEdit.dataset.id
+
+    try{
+        const data = await fetch(`/publicacion/${id}`, {
+            method: 'put',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({titulo: titulo, descripcion: descripcion})
+        })
+        const res = await data.json()
+
+        console.log(res)
+    } catch(error){
+        console.log(error)
+    }
+
   })
 </script>
