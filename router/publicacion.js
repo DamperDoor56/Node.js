@@ -34,7 +34,7 @@ router.post('/', async (req, res) => { //Datos de publicacion
     }
 })
 //id
-router.get('/app/:id', async(req, res) =>{
+router.get('/:id', async(req, res) =>{
     const id = req.params.id
 
     try{
@@ -56,7 +56,7 @@ router.get('/app/:id', async(req, res) =>{
 })
 
 //Delete
-router.delete('/app/:id', async(req, res) =>{
+router.delete('/:id', async(req, res) =>{
     const id = req.params.id
     console.log('id from backend', id)
 
@@ -81,7 +81,7 @@ router.delete('/app/:id', async(req, res) =>{
 })
 
 //Update content 
-router.put('/app/:id', async(req, res) => {
+router.put('/:id', async(req, res) => {
     const id = req.params.id
     const body = req.body
 
