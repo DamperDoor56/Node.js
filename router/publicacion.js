@@ -34,7 +34,7 @@ router.post('/', async (req, res) => { //Datos de publicacion
     }
 })
 //id
-router.get('/app/:id', async(req, res) =>{
+router.get('/app/:id', (req, res) =>{
     const id = req.params.id
 
     try{
