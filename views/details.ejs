@@ -39,7 +39,7 @@
             </form>
 
         <% } %>
-        <a href="/publicacion">Return to Home</a>
+        <a href="/">Return to Home</a>
 </div>
 <%- include("template/footer") %>  
 <!-- *Method = POST to use router.post -->
@@ -51,13 +51,13 @@
     btnDelete.addEventListener('click', async() =>{
         const id = btnDelete.dataset.id 
     try {
-        const data = await fetch(`/publicacion/${btnDelete.dataset.id}`, {
+        const data = await fetch(`/${btnDelete.dataset.id}`, {
           method: 'delete'
         })
         const res = await data.json()
         console.log(res)
         if(res.state){
-            window.location.href = '/publicacion'
+            window.location.href = '/'
         }else{
             console.log(res)
         }
@@ -77,7 +77,7 @@
     const id = formEdit.dataset.id
 
     try{
-        const data = await fetch(`/publicacion/${id}`, {
+        const data = await fetch(`/${id}`, {
             method: 'put',
             headers:{
                 'Content-Type': 'application/json'
@@ -87,7 +87,7 @@
         const res = await data.json()
         
         if(res.state){
-            window.location.href = '/publicacion'
+            window.location.href = '/'
         } else {
             console.log(res)
         }

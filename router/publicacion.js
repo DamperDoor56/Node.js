@@ -26,7 +26,7 @@ router.post('/', async (req, res) => { //Datos de publicacion
     try{
         const publiDB = new publicacion(body)
         await publiDB.save()
-        res.redirect('/publicacion')
+        res.redirect('/')
 
         console.log(publiDB)
     } catch (error){
