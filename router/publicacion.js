@@ -3,7 +3,7 @@ const router = express.Router();
 const publicacion = require('../models/Publicacion');
 
 //Ruta de get info
-router.get('/', async (req, res) =>{ 
+router.get('/',  (req, res) =>{ 
 
     try{
         const arraypublicacionesDB = await publicacion.find()
@@ -21,7 +21,7 @@ router.get('/crear', (req, res) => {
     res.render('crear')
 })
 
-router.post('/', async (req, res) => { //Datos de publicacion
+router.post('/',  (req, res) => { //Datos de publicacion
     const body = req.body
     try{
         const publiDB = new publicacion(body)
@@ -56,7 +56,7 @@ router.get('/app/:id', (req, res) =>{
 })
 
 //Delete
-router.delete('/app/:id', async(req, res) =>{
+router.delete('/app/:id', (req, res) =>{
     const id = req.params.id
     console.log('id from backend', id)
 
@@ -81,7 +81,7 @@ router.delete('/app/:id', async(req, res) =>{
 })
 
 //Update content 
-router.put('/app/:id', async(req, res) => {
+router.put('/app/:id', (req, res) => {
     const id = req.params.id
     const body = req.body
 
