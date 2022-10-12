@@ -33,6 +33,7 @@ app.use('/', require('./router/publicacion'))
 app.listen(port, () => {
     console.log('servidor a su servicio en el puerto', port)
 })
+
 app.use((req, res, next) =>{
     res.status(404).render("404", {
         titulo404: "404",
