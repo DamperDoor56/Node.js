@@ -28,7 +28,7 @@ app.set('views', __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
 //Rutas web
-app.use('', require('./router/publicacion'))
+app.use('/', require('./router/publicacion'))
 
 app.listen(port, () => {
     console.log('servidor a su servicio en el puerto', port)
