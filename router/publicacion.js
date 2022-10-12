@@ -80,4 +80,25 @@ router.delete('/:id', async(req, res) =>{
     }
 })
 
+//Update content 
+router.put('/:id', async(req, res) => {
+    const id = req.params.id
+    const body = req.body
+
+    try{
+        const publiDB = await publicacion.findByIdAndUpdate(
+            id, body, { useFindAndModify: false } //Documentation recomended this
+        )
+        console.log(publiDB)
+        
+        res.json({
+            state:true,
+            message: 'Updated!'
+        })
+    } 
+    catch(error){
+        console.log(error)
+    }
+})
+
 module.exports = router;

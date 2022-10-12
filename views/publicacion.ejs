@@ -18,9 +18,12 @@
                                <td><%= publicacion.titulo %></td>
                                <td><%= publicacion.descripcion %></td>
                                <td>
-                                <a href="publicacion/<%= publicacion.id %>">
-                                    details
-                                </a>
+                                    <button
+                                            class="btnEdit">
+                                            <a href="publicacion/<%= publicacion.id %>">
+                                            Edit
+                                            </a>
+                                    </button>
                                </td>
                            </tr>
                         <% }) %>

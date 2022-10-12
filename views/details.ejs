@@ -12,46 +12,32 @@
         
         <% if (!error) { %>
 
-            <form action="">
+            <form id="formEdit">
                 <input 
                     type="text"
                     class="form-c"
                     name="titulo"
                     value="<%= publicacion.titulo %>"
+                    id="tituloInput"
                     >
                     <input 
                     type="text"
                     class="form-c"
                     name="descripcion"
                     value="<%= publicacion.descripcion %>"
+                    id="descripcionInput"
                     >
-                <button
-                    class="btnEdit">
-                    Editar
-                </button>
+                        <button
+                        class="btnEdit">
+                        Update
+                        </button>
+                        <button 
+                        id="btnDelete"
+                        data-id="<%= publicacion.id %>">
+                        Delete
+                        </button>
             </form>
-          
 
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Titulo</th>
-                    <th>Description</th>
-                    <th>Accion</th>
-                </tr>
-                 </thead>
-                   <tbody>
-                           <tr>
-                               <td><%= publicacion.id %></td>
-                               <td><%= publicacion.titulo %></td>
-                               <td><%= publicacion.descripcion %></td>
-                               <td><button 
-                                id="btnDelete"
-                                data-id="<%= publicacion.id %>">Delete</button></td>
-                           </tr>
-                       </tbody>
-            </table>
         <% } %>
         <a href="/publicacion">Return to Home</a>
 </div>
@@ -78,5 +64,15 @@
     } catch (error) {
         console.log(error)
     }
+  })
+
+  //Capture formEdit
+  const formEdit = document.querySelector('#formEdit')
+
+  formEdit.addEventListener('submit', (e) => {
+    e.preventDefault() //Prevent refreshing
+    
+    const titulo = formEdit.elements['name'].value
+    console.log(titulo)
   })
 </script>
