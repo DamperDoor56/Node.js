@@ -3,7 +3,7 @@ const router = express.Router();
 const publicacion = require('../models/Publicacion');
 
 //Ruta de get info
-router.get('/', async (req, res) =>{ 
+router.get('', async (req, res) =>{ 
 
     try{
         const arraypublicacionesDB = await publicacion.find()
