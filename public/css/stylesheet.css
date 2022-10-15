@@ -55,7 +55,7 @@ body{
 .create-post{
     margin: 1rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 1rem;
     background-color: #1A1B1A;
     border: 2px solid gray;
@@ -69,6 +69,10 @@ body{
     border-radius: 5px;
     background-color: rgb(3, 3, 3);
     color: snow;
+}
+.create-post form{
+    display: flex;
+    margin: 0;
 }
 .submit{
     cursor: pointer;
