@@ -47,46 +47,45 @@ body{
     font-size: 18px;
     padding: 0 0 25px 20px;
 }
- /*Table*/
+ /*Post*/
 
 .submit{
     margin-top: 2%;
     width: 20%;
     height: 30px;
     border: none;
-    background-color: green;
+    background-color: gray;
     border-radius: 5px;
 }
 .submit a {
-    color: #111;
+    color: snow;
     text-decoration: none;
 }
-.table{
-    width: 100%; 
-    border-collapse: collapse;  
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
 }
-tr:nth-of-type(odd) {  /* Zebra striping */
-    background: #eee; 
-    color: #111;
-}
-th { 
-    background: #333; 
-    color: white; 
-    font-weight: bold; 
-}
-td, th { 
-    padding: 6px; 
-    border: 1px solid #ccc; 
-    text-align: left; 
-}
-button{
-    align-self: center;
+.post{
+    text-align: left;
+    background: rgba(17, 17, 17, 0.582);
+    max-width: 600px;
+    min-height: 100px;
+    width: 600px;
+    padding: 1rem 2rem;
+    border: 2px solid gray;
+    border-radius: 16px;
 }
 
 /* Form to create */
 .container-crear{
     display: grid;
     justify-content: center;
+}
+
+.space{
+    height: 20px;
 }
 .form-good{
     display: grid;
