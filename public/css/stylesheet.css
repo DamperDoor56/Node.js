@@ -62,7 +62,7 @@ body{
     border-radius: 15px;
 }
 .create-post input{
-    width: 75%;
+    width: 100%;
     height: auto;
     border: 2px solid gray;
     outline: none;
@@ -71,6 +71,7 @@ body{
     color: snow;
 }
 .submit{
+    cursor: pointer;
     width: 15%;
     height: 30px;
     border: none;
@@ -90,7 +91,7 @@ body{
 }
 .post{
     text-align: left;
-    background: rgba(17, 17, 17, 0.582);
+    background: #1A1B1A;
     min-width: 10%;
     min-height: 100px;
     padding: 1rem 2rem;
@@ -100,17 +101,10 @@ body{
 .descr{
     max-width: 600px;
 }
-/* Form to create */
-.container-crear{
-    display: grid;
-    justify-content: center;
-}
 .space{
     height: 20px;
 }
-.form-good{
-    display: grid;
-}
+
 
 /* Mobile */
 @media screen and (max-width:305px) {
