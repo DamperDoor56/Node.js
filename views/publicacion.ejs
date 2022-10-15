@@ -2,13 +2,18 @@
     <body>
         
         <div class="container">
-            <button class="submit" type="submit"><a href="/crear">Publica algo</a></button>
+            <div class="create-post">
+                <div class="username-pic">
+                <img src="https://res.cloudinary.com/dweiaqd6l/image/upload/v1663791923/imagen_2022-09-21_172521344_pnjfey.png" alt=""></div>
+                <input type="text" name="" placeholder="Publish" id="">
+                <button class="submit" type="submit"><a href="/crear">Post</a></button>
+            </div>
             <article>
                      <% if (arrayPublicaciones.length > 0) { %>
                         <% arrayPublicaciones.forEach(publicacion => { %>
                             <div class="post">
                                <h1><%= publicacion.titulo %></h1>
-                               <p><%= publicacion.descripcion %></p>
+                               <p class="descr"><%= publicacion.descripcion %></p>
                                <div>
                                     <button
                                             class="btnEdit">
