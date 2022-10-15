@@ -3,7 +3,7 @@ body{
     margin: 0;
     font-family: monospace;
     color: rgb(223, 223, 223);
-    background-color: rgb(70, 70, 70);
+    background-color: rgb(3, 3, 3);
 } 
 /* Navbar */
 .navbar{
@@ -37,6 +37,10 @@ body{
     width: 25px;
     display: inline;
 }
+.username-pic img{ 
+    width: 25px;
+    display: inline;
+}
 .navbar .username-pic p{
     display: inline;
     vertical-align: top;
@@ -47,50 +51,64 @@ body{
     font-size: 18px;
     padding: 0 0 25px 20px;
 }
- /*Table*/
-
+ /*Post*/
+.create-post{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #1A1B1A;
+    border: 2px solid gray;
+    border-radius: 15px;
+}
+.create-post input{
+    width: 100%;
+    height: auto;
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgb(3, 3, 3);
+    color: snow;
+}
+.create-post form{
+    display: flex;
+    margin: 0;
+}
 .submit{
-    margin-top: 2%;
-    width: 20%;
+    cursor: pointer;
+    width: 15%;
     height: 30px;
     border: none;
-    background-color: green;
+    background-color: gray;
     border-radius: 5px;
 }
 .submit a {
-    color: #111;
+    color: snow;
     text-decoration: none;
 }
-.table{
-    width: 100%; 
-    border-collapse: collapse;  
-}
-tr:nth-of-type(odd) {  /* Zebra striping */
-    background: #eee; 
-    color: #111;
-}
-th { 
-    background: #333; 
-    color: white; 
-    font-weight: bold; 
-}
-td, th { 
-    padding: 6px; 
-    border: 1px solid #ccc; 
-    text-align: left; 
-}
-button{
-    align-self: center;
-}
-
-/* Form to create */
-.container-crear{
+.container{
+    margin-top: 25px;
+    width: 100%;
     display: grid;
     justify-content: center;
+
 }
-.form-good{
-    display: grid;
+.post{
+    text-align: left;
+    background: #1A1B1A;
+    min-width: 10%;
+    min-height: 100px;
+    padding: 1rem 2rem;
+    border: 2px solid gray;
+    border-radius: 16px;
 }
+.descr{
+    max-width: 600px;
+}
+.space{
+    height: 20px;
+}
+
 
 /* Mobile */
 @media screen and (max-width:305px) {
