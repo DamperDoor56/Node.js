@@ -4,7 +4,9 @@ const Schema = mongoose.Schema;
 const publiSchema = new Schema({ // El schema de mongoose 
   titulo:  String,
   descripcion: String,
-  // user: String
+  user: String,
+  createdAt: Date,
+  updatedAt: Date
 },{
   timestamps: {
   createdAt: 'created_at', // Use `created_at` to store the created date

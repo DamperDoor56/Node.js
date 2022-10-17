@@ -51,11 +51,28 @@ body{
     font-size: 18px;
     padding: 0 0 25px 20px;
 }
-    /*  */
+.show-on-touch{
+    display: none;
+    padding: 1rem;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    border-radius: 15px;
+    background-color: #111;
+    transition: 0.5s all;
+}
+.show-on-touch input{
+    background-color: #111;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: gray 2px solid;
+}
+ /*  */
  /*Post*/
  /*  */
 .create-post{
-    margin: 1rem;
+    margin: 1rem 0 1rem 0;
     padding: 1rem;
     background-color: #1A1B1A;
     border: 2px solid gray;
@@ -104,20 +121,25 @@ body{
 .post{
     text-align: left;
     background: #1A1B1A;
-    min-width: 10%;
+    width: 600px;
     min-height: 100px;
     padding: 1rem 2rem;
     border: 2px solid gray;
     border-radius: 16px;
 }
 .descr{
-    max-width: 600px;
+    max-width: 200px;
 }
 .space{
     height: 20px;
 }
 
-
+/*  */
+/* Details */
+/*  */
+.btnEdit, #btnDelete{
+    width: 15%;
+}
 /* Mobile */
 @media screen and (max-width:305px) {
     .navbar .username-pic :nth-child(3){

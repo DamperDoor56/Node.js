@@ -10,10 +10,30 @@
  <div class="tituls">
     <h2>Node.js</h2>
  </div>
-    <div class="username-pic">
+    <div class="username-pic" onclick="showOnClick()">
        <img src="https://res.cloudinary.com/dweiaqd6l/image/upload/v1663791923/imagen_2022-09-21_172521344_pnjfey.png" alt=""> 
        <p>UserName</p> 
        <i class="fa-solid fa-chevron-down"></i>
     </div>
+    <div class="show-on-touch">
+      <form action="/" class="form-username"
+         method="POST"> 
+             <input type="text" name="user"
+             placeholder="UserName">
+             <button type="submit" class="submit">Ok</button>
+         </form>
+    </div>
         
 </nav>
+
+<script>
+   const show = document.querySelector('.show-on-touch')
+
+   function showOnClick() {
+      if (show.style.display === "none") {
+         show.style.display = "block";
+      } else {
+         show.style.display = "none";
+       }
+   }
+</script>
