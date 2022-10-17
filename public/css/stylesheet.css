@@ -51,32 +51,40 @@ body{
     font-size: 18px;
     padding: 0 0 25px 20px;
 }
+    /*  */
  /*Post*/
+ /*  */
 .create-post{
     margin: 1rem;
-    display: flex;
-    justify-content: center;
     padding: 1rem;
     background-color: #1A1B1A;
     border: 2px solid gray;
     border-radius: 15px;
 }
 .create-post input{
-    width: 100%;
-    height: auto;
-    border: 2px solid gray;
+    margin: 0.2rem 0 0.2rem 0;
+    height: 30px;
+    border: none;
     outline: none;
-    border-radius: 5px;
     background-color: rgb(3, 3, 3);
     color: snow;
 }
-.create-post form{
-    display: flex;
+.create-post :nth-child(4){
+    height: 50px;
+}
+.create-post img{
+    width:30px;
+    border-radius: 2px;
+}
+.form-good{
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: left;
 }
 .submit{
     cursor: pointer;
-    width: 15%;
+    width: 35%;
     height: 30px;
     border: none;
     background-color: gray;
