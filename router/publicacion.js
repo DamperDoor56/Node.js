@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const publicacion = require('../models/Publicacion');
+const user = require('../models/User');
+
 
 //Ruta de get info
 router.get('/', async (req, res) =>{ 
