@@ -74,6 +74,7 @@ body{
 .create-post{
     margin: 1rem 0 1rem 0;
     padding: 1rem;
+    width: 600px;
     background-color: #1A1B1A;
     border: 2px solid gray;
     border-radius: 15px;

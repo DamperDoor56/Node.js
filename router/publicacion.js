@@ -18,11 +18,9 @@ router.get('/', async (req, res) =>{
         console.log(error)
     }
 })
-//Ruta de creacion
-router.get('/crear', (req, res) => { 
-    res.render('crear')
-})
 
+
+//Publicacion
 router.post('/', async (req, res) => { //Datos de publicacion
     const body = req.body
     try{
