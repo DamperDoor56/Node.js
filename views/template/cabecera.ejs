@@ -14,11 +14,11 @@
        <img src="https://res.cloudinary.com/dweiaqd6l/image/upload/v1663791923/imagen_2022-09-21_172521344_pnjfey.png" alt=""> 
        <% arrayPublicaciones.forEach(publicacion => { %> 
          <p><strong>
-            <% if (publicacion.username === "") { %>
+            <% if (Object.values(arrayPublicaciones).pop().username === "") { %>
              Anon
             <% } %>
-            <% if (publicacion.username != "") { %>
-                <%= publicacion.username %>
+            <% if (Object.values(arrayPublicaciones).pop().username != "") { %>
+                <%= Object.values(arrayPublicaciones).pop().username %>
             <% } %>
             <% }) %>
        <i class="fa-solid fa-chevron-down"></i>
