@@ -20,11 +20,11 @@ router.get('/', async (req, res) =>{
 router.post('/', async (req, res) => { //Datos de usuario
     const body = req.body
     try{
-        const publiDB = new publicacion(body)
-        await publiDB.save()
+        const userdb = new user(body)
+        await userdb.save()
         res.redirect('/')
 
-        console.log(publiDB)
+        console.log(userdb)
     } catch (error){
         console.log(error)
     }
@@ -34,17 +34,17 @@ router.get('/:id', async(req, res) =>{
     const id = req.params.id
 
     try{
-        const publicacionDB = await publicacion.findOne({ _id: id })
-        console.log(publicacionDB)
+        const userDB = await user.findOne({ _id: id })
+        console.log(userDB)
 
-        res.render('details',{
-            publicacion: publicacionDB,
+        res.render('cabecera',{
+            user: userDB,
             error: false
         })
     }
     catch(error){
         console.log(error)
-        res.render('details',{
+        res.render('cabecera',{
             error: true,
             message: "No se encuentra el id"
         })
