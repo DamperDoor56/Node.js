@@ -12,18 +12,18 @@
  </div>
     <div class="username-pic" onclick="showOnClick()">
        <img src="https://res.cloudinary.com/dweiaqd6l/image/upload/v1663791923/imagen_2022-09-21_172521344_pnjfey.png" alt=""> 
-       <p>UserName</p> 
+       <% arrayPublicaciones.forEach(publicacion => { %> 
+         <p><strong>
+            <% if (publicacion.username === "") { %>
+             Anon
+            <% } %>
+            <% if (publicacion.username != "") { %>
+                <%= publicacion.username %>
+            <% } %>
+            <% }) %>
        <i class="fa-solid fa-chevron-down"></i>
     </div>
-<!-- User Name input -->
-    <div class="show-on-touch">
-      <form action="/" class="form-username"
-         method="POST"> 
-             <input type="text" name="username"
-             placeholder="UserName">
-             <button type="submit" class="submit">Ok</button>
-         </form>
-    </div>
+
         
 </nav>
 

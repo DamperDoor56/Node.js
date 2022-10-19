@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const publiSchema = new Schema({ // El schema de mongoose 
   titulo:  String,
   descripcion: String,
+  username: String,
   createdAt: Date,
   updatedAt: Date
 },{

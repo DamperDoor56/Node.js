@@ -8,7 +8,14 @@
                         <% arrayPublicaciones.forEach(publicacion => { %>
                             <div class="post">
                                <h1><%= publicacion.titulo %></h1>
-                               <p><strong>by user</strong></p>
+                               <p>Made by <strong>
+                                <% if (publicacion.username === "") { %>
+                                 Anon
+                                <% } %>
+                                <% if (publicacion.username != "") { %>
+                                    <%= publicacion.username %>
+                                <% } %>
+                               </strong></p>
                                <p class="descr"><%= publicacion.descripcion %></p>
                                <div>
                                     <button
