@@ -16,6 +16,8 @@ body{
 }
 
 .navbar .username-pic{
+    position: absolute;
+    right: 0;
     cursor: pointer;
     font-size: 15px;
     height: 25px;
@@ -79,9 +81,11 @@ body{
     margin: 1rem 0 1rem 0;
     padding: 1rem;
     width: 600px;
+    max-width: 600px;
     background-color: #1A1B1A;
     border: 2px solid gray;
     border-radius: 15px;
+    transition: 0.5s all;
 }
 .create-post input{
     margin: 0.2rem 0 0.2rem 0;
@@ -127,10 +131,13 @@ body{
     text-align: left;
     background: #1A1B1A;
     width: 600px;
+    max-width: 600px;
     min-height: 100px;
     padding: 1rem 2rem;
     border: 2px solid gray;
     border-radius: 16px;
+    transition: 0.5s all;
+
 }
 .descr{
     max-width: 500px;
@@ -146,11 +153,24 @@ body{
     width: 15%;
 }
 /* Mobile */
-@media screen and (max-width:305px) {
-    .navbar .username-pic :nth-child(3){
-        padding-left: 0;
+@media screen and (max-width: 680px) {
+    .post {
+        width: 300px;
+        min-height: 100px;
     }
-    .navbar .username-pic p{
-        display: none;
+    .create-post {
+        width: 300px;
+        min-height: 100px;
+    }
+}
+@media screen and (max-width: 393px){
+
+    .post {
+        width: 200px;
+        min-height: 100px;
+    }
+    .create-post {
+        width: 200px;
+        min-height: 100px;
     }
 }
