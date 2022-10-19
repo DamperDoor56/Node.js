@@ -10,8 +10,9 @@
  <div class="tituls">
     <h2>Node.js</h2>
  </div>
-    <div class="username-pic" onclick="showOnClick()">
+    <div class="username-pic">
        <img src="https://res.cloudinary.com/dweiaqd6l/image/upload/v1663791923/imagen_2022-09-21_172521344_pnjfey.png" alt=""> 
+       <% if (arrayPublicaciones.length > 0) { %>
        <% arrayPublicaciones.forEach(publicacion => { %> 
          <p><strong>
             <% if (Object.values(arrayPublicaciones).pop().username === "") { %>
@@ -19,22 +20,12 @@
             <% } %>
             <% if (Object.values(arrayPublicaciones).pop().username != "") { %>
                 <%= Object.values(arrayPublicaciones).pop().username %>
-            <% } %>
+            <% } %> 
             <% }) %>
+            <% } %>
+         </p>
        <i class="fa-solid fa-chevron-down"></i>
     </div>
 
         
 </nav>
-
-<script>
-   const show = document.querySelector('.show-on-touch')
-
-   function showOnClick() {
-      if (show.style.display === "none") {
-         show.style.display = "block";
-      } else {
-         show.style.display = "none";
-       }
-   }
-</script>
