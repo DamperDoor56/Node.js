@@ -12,8 +12,20 @@
  </div>
     <div class="username-pic">
        <img src="https://res.cloudinary.com/dweiaqd6l/image/upload/v1663791923/imagen_2022-09-21_172521344_pnjfey.png" alt=""> 
-       <p>UserName</p> 
+       <% if (arrayPublicaciones.length > 0) { %>
+       <% arrayPublicaciones.forEach(publicacion => { %> 
+         <p><strong>
+            <% if (Object.values(arrayPublicaciones).pop().username === "") { %>
+             Anon
+            <% } %>
+            <% if (Object.values(arrayPublicaciones).pop().username != "") { %>
+                <%= Object.values(arrayPublicaciones).pop().username %>
+            <% } %> 
+            <% }) %>
+            <% } %>
+         </p>
        <i class="fa-solid fa-chevron-down"></i>
     </div>
+
         
 </nav>

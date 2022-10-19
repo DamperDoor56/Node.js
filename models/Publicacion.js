@@ -3,11 +3,16 @@ const Schema = mongoose.Schema;
 
 const publiSchema = new Schema({ // El schema de mongoose 
   titulo:  String,
-  descripcion: String
-  // user: String
+  descripcion: String,
+  username: String,
+  createdAt: Date,
+  updatedAt: Date
+},{
+  timestamps: true 
 });
 
 // Crear el modelo
 const publicacion = mongoose.model('publicacion', publiSchema);
 
 module.exports = publicacion;
+

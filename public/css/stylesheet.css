@@ -14,7 +14,10 @@ body{
     width: 100%;
     font-size: 20px;
 }
+
 .navbar .username-pic{
+    position: absolute;
+    right: 0;
     cursor: pointer;
     font-size: 15px;
     height: 25px;
@@ -29,19 +32,22 @@ body{
 .navbar .username-pic:hover{
     border: 0.2px solid rgb(68, 68, 68);
 }
-.navbar .username-pic :nth-child(3){
-    vertical-align: super;
-    padding-left: 40px;
-}
 .navbar .username-pic img{ 
     width: 25px;
     display: inline;
+}
+.navbar .username-pic i{
+    padding-left: 15px;
+    vertical-align: super;
 }
 .username-pic img{ 
     width: 25px;
     display: inline;
 }
 .navbar .username-pic p{
+    display: none;
+}
+.navbar .username-pic :nth-child(2){
     display: inline;
     vertical-align: top;
     text-decoration: none;
@@ -51,32 +57,60 @@ body{
     font-size: 18px;
     padding: 0 0 25px 20px;
 }
- /*Post*/
-.create-post{
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
+.show-on-touch{
+    display: none;
     padding: 1rem;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    border-radius: 15px;
+    background-color: #111;
+    transition: 0.5s all;
+}
+.show-on-touch input{
+    background-color: #111;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: gray 2px solid;
+}
+ /*  */
+ /*Post*/
+ /*  */
+.create-post{
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    width: 600px;
+    max-width: 600px;
     background-color: #1A1B1A;
     border: 2px solid gray;
     border-radius: 15px;
+    transition: 0.5s all;
 }
 .create-post input{
-    width: 100%;
-    height: auto;
-    border: 2px solid gray;
+    margin: 0.2rem 0 0.2rem 0;
+    height: 30px;
+    border: none;
     outline: none;
-    border-radius: 5px;
     background-color: rgb(3, 3, 3);
     color: snow;
 }
-.create-post form{
-    display: flex;
+.create-post :nth-child(4){
+    height: 50px;
+}
+.create-post img{
+    width:30px;
+    border-radius: 2px;
+}
+.form-good{
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: left;
 }
 .submit{
     cursor: pointer;
-    width: 15%;
+    width: 35%;
     height: 30px;
     border: none;
     background-color: gray;
@@ -96,26 +130,47 @@ body{
 .post{
     text-align: left;
     background: #1A1B1A;
-    min-width: 10%;
+    width: 600px;
+    max-width: 600px;
     min-height: 100px;
     padding: 1rem 2rem;
     border: 2px solid gray;
     border-radius: 16px;
+    transition: 0.5s all;
+
 }
 .descr{
-    max-width: 600px;
+    max-width: 500px;
 }
 .space{
     height: 20px;
 }
 
-
+/*  */
+/* Details */
+/*  */
+.btnEdit, #btnDelete{
+    width: 15%;
+}
 /* Mobile */
-@media screen and (max-width:305px) {
-    .navbar .username-pic :nth-child(3){
-        padding-left: 0;
+@media screen and (max-width: 680px) {
+    .post {
+        width: 300px;
+        min-height: 100px;
     }
-    .navbar .username-pic p{
-        display: none;
+    .create-post {
+        width: 300px;
+        min-height: 100px;
+    }
+}
+@media screen and (max-width: 393px){
+
+    .post {
+        width: 200px;
+        min-height: 100px;
+    }
+    .create-post {
+        width: 200px;
+        min-height: 100px;
     }
 }

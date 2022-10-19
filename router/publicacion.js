@@ -2,12 +2,12 @@ const express = require('express');
 const router = express.Router();
 const publicacion = require('../models/Publicacion');
 
+
 //Ruta de get info
 router.get('/', async (req, res) =>{ 
 
     try{
         const arraypublicacionesDB = await publicacion.find()
-        console.log(arraypublicacionesDB)
 
          res.render("publicacion", {
             arrayPublicaciones : arraypublicacionesDB
@@ -16,11 +16,9 @@ router.get('/', async (req, res) =>{
         console.log(error)
     }
 })
-//Ruta de creacion
-router.get('/crear', (req, res) => { 
-    res.render('crear')
-})
 
+
+//Publicacion
 router.post('/', async (req, res) => { //Datos de publicacion
     const body = req.body
     try{
@@ -28,7 +26,6 @@ router.post('/', async (req, res) => { //Datos de publicacion
         await publiDB.save()
         res.redirect('/')
 
-        console.log(publiDB)
     } catch (error){
         console.log(error)
     }
@@ -39,7 +36,6 @@ router.get('/:id', async(req, res) =>{
 
     try{
         const publicacionDB = await publicacion.findOne({ _id: id })
-        console.log(publicacionDB)
 
         res.render('details',{
             publicacion: publicacionDB,

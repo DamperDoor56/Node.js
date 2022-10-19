@@ -12,32 +12,24 @@
         
         <% if (!error) { %>
 
-            <form id="formEdit" data-id="<%= publicacion.id %>">
-                <input 
-                    type="text"
-                    class="form-c"
-                    name="titulo"
-                    value="<%= publicacion.titulo %>"
-                    id="tituloInput"
-                    >
-                    <input 
-                    type="text"
-                    class="form-c"
-                    name="descripcion"
-                    value="<%= publicacion.descripcion %>"
-                    id="descripcionInput"
-                    >
-                        <button
-                        class="btnEdit">
-                        Update
-                        </button>
-                        <button 
-                        id="btnDelete"
-                        data-id="<%= publicacion.id %>">
-                        Delete
-                        </button>
-            </form>
 
+            <div class="create-post">
+                <form id="formEdit" data-id="<%= publicacion.id %>" action="/" class="form-good"
+                method="POST"> 
+                    <img src="https://res.cloudinary.com/dweiaqd6l/image/upload/v1663791923/imagen_2022-09-21_172521344_pnjfey.png" alt="">
+                    <p>{UserName}</p>
+                    <input type="text"class="form-c"
+                    name="titulo" value="<%= publicacion.titulo %>"
+                    id="tituloInput">
+                    <input type="text" class="form-c"
+                    name="descripcion" value="<%= publicacion.descripcion %>"
+                    id="descripcionInput">
+                    <div class="buttons">
+                    <button class="btnEdit">Update</button>
+                    <button id="btnDelete" data-id="<%= publicacion.id %>">Delete</button>
+                   </div>
+                </form>
+            </div>
         <% } %>
         <a href="/">Return to Home</a>
 </div>
