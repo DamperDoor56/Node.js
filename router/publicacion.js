@@ -17,6 +17,10 @@ router.get('/', async (req, res) =>{
     }
 })
 
+//Create
+router.get('/create', (req, res) => {
+    res.render("create")
+})
 
 //Publicacion
 router.post('/', async (req, res) => { //Datos de publicacion

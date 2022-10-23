@@ -1,8 +1,15 @@
-<%- include("template/cabecera" , {tituloWeb: 'Pagina de Publicaciones'})  %>  
+<%- include("template/cabecera")  %>  
     <body>
         
         <div class="container">
-            <%- include("./crear") %> 
+            <div class="create-post-publicacion" onclick="location.href = '/create'">
+                <form class="form-good-publicacion"> 
+                    <img src="https://res.cloudinary.com/dweiaqd6l/image/upload/v1663791923/imagen_2022-09-21_172521344_pnjfey.png" alt="">
+                    <input type="text" name="titulo"
+                    placeholder="Title">
+                    <button type="submit" class="submit"> Post</button>
+                </form>
+            </div>
             <article>
                      <% if (arrayPublicaciones.length > 0) { %>
                         <% arrayPublicaciones.forEach(publicacion => { %>

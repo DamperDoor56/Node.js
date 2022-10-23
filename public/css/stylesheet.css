@@ -81,7 +81,6 @@ body{
     margin: 1rem 0 1rem 0;
     padding: 1rem;
     width: 600px;
-    max-width: 600px;
     background-color: #1A1B1A;
     border: 2px solid gray;
     border-radius: 15px;
@@ -127,6 +126,36 @@ body{
     justify-content: center;
 
 }
+.create-post-publicacion{
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    width: 630px;
+    max-width: 630px;
+    background-color: #1A1B1A;
+    border: 2px solid gray;
+    border-radius: 5px;
+    transition: 0.5s all;
+}
+.form-good-publicacion{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.form-good-publicacion input{
+    outline: none;
+    padding: 0.2rem;
+    width: 70%;
+    border: 2px solid gray;
+    background-color: #303030;
+    border-radius: 15px;
+}
+.form-good-publicacion button{
+    width: 100px;
+}
+.create-post-publicacion img{
+    width: 30px;
+}
 .post{
     text-align: left;
     background: #1A1B1A;
@@ -158,6 +187,10 @@ body{
         width: 300px;
         min-height: 100px;
     }
+    .create-post-publicacion{
+        width: 330px;
+        min-height: 20px;
+    }
     .create-post {
         width: 300px;
         min-height: 100px;
@@ -172,5 +205,9 @@ body{
     .create-post {
         width: 200px;
         min-height: 100px;
+    }
+    .create-post-publicacion{
+        width: 230px;
+        min-height: 30px;
     }
 }
