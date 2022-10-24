@@ -136,6 +136,22 @@ body{
     border-radius: 5px;
     transition: 0.5s all;
 }
+.sort-by button{
+    background-color: #1A1B1A;
+    color: gray;
+    cursor: pointer;
+    font-weight: 700;
+    border: 2px solid gray;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 25px;
+}
+.sort-by{
+    display: flex;
+    justify-content: space-around;
+}
+.sort-by i{
+    font-size: 20px;
+}
 .form-good-publicacion{
     width: 100%;
     margin: 0;
