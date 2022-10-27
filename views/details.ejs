@@ -19,7 +19,6 @@
 
     <body>
         <div class="container-details">
-            <h1>Detalles</h1>
             <% if(error) { %>
                 <p>
                     <%= message %> 
@@ -34,7 +33,6 @@
                 <form id="formEdit" data-id="<%= publicacion.id %>" action="/" class="form-good"
                 method="POST"> 
                     <img src="https://res.cloudinary.com/dweiaqd6l/image/upload/v1663791923/imagen_2022-09-21_172521344_pnjfey.png" alt="">
-                    <p><%= publicacion.username %></p>
                     <input type="text"class="form-c"
                     name="titulo" value="<%= publicacion.titulo %>"
                     id="tituloInput">
@@ -51,7 +49,8 @@
                 </form>
             </div>
         <% } %>
-        <a href="/">Return to Home</a>
+        <button><a href="/">Return to Home</a></button>
+        
 </div>
 <%- include("template/footer") %>  
 <!-- *Method = POST to use router.post -->

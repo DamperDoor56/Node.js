@@ -221,6 +221,33 @@ body{
 /*  */
 /* Details */
 /*  */
+.container-details{
+    margin-top: 1%;
+    display: grid;
+    justify-content: center;
+}
+.container-details button{
+    background-color: #1A1B1A;
+    color: gray;
+    cursor: pointer;
+    font-weight: 700;
+    border: 2px solid gray;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 3px;
+    transition: 0.5s all;
+}
+.container-details button:hover{
+    background-color: gray;
+    color: #1A1B1A;
+    border: 2px solid #1A1B1A;
+}
+.container-details button a{
+    color: gray;
+    text-decoration: none;
+}
+.container-details button:hover a{
+    color: #1A1B1A;
+}
 .btnEdit, #btnDelete{
     width: 15%;
 }
