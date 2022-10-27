@@ -77,6 +77,12 @@ body{
  /*  */
  /*Post*/
  /*  */
+ .create-wrap{
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+ }
 .create-post{
     margin: 1rem 0 1rem 0;
     padding: 1rem;
@@ -265,9 +271,11 @@ body{
         width: 300px;
         min-height: 100px;
     }
+    .btnEdit{
+        width: 50%;
+    }
 }
 @media screen and (max-width: 393px){
-
     .post {
         width: 200px;
         min-height: 100px;
