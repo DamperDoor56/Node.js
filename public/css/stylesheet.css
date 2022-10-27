@@ -144,6 +144,12 @@ body{
     border: 2px solid gray;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 25px;
+    transition: 0.5s all;
+}
+.sort-by button:hover{
+    background-color: gray;
+    color: #1A1B1A;
+    border: 2px solid #1A1B1A;
 }
 .sort-by{
     display: flex;
@@ -183,6 +189,27 @@ body{
     border-radius: 16px;
     transition: 0.5s all;
 
+}
+.post button{
+    background-color: #1A1B1A;
+    cursor: pointer;
+    font-weight: 700;
+    border: 2px solid gray;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 5px;
+    transition: 0.5s all;
+}
+.post button a{
+    text-decoration: none;
+    color: gray;
+}
+.post button:hover{
+    background-color: gray;
+    color: #1A1B1A;
+    border: 2px solid #1A1B1A;
+}
+.post button:hover a{
+    color: #1A1B1A;
 }
 .descr{
     max-width: 500px;
