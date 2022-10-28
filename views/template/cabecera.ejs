@@ -15,11 +15,11 @@
        <% if (arrayPublicaciones.length > 0) { %>
        <% arrayPublicaciones.forEach( publicacion => { %> 
          <p><strong>
-            <% if (Object.values(arrayPublicaciones).pop().username === "") { %>
+            <% if (Object.values(arrayPublicaciones).shift().username === "") { %>
              Anon
             <% } %>
-            <% if (Object.values(arrayPublicaciones).pop().username != "") { %>
-                <%= Object.values(arrayPublicaciones).pop().username %>
+            <% if (Object.values(arrayPublicaciones).shift().username != "") { %>
+                <%= Object.values(arrayPublicaciones).shift().username %>
             <% } %> 
             <% }) %>
             <% } %>

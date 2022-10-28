@@ -7,7 +7,7 @@ const publicacion = require('../models/Publicacion');
 router.get('/', async (req, res) =>{ 
 
     try{
-        const arraypublicacionesDB = await publicacion.find().sort({createdAt: -1})
+        const arraypublicacionesDB = await publicacion.find().sort({updatedAt: -1})
 
          res.render("publicacion", {
             arrayPublicaciones : arraypublicacionesDB
