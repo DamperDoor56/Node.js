@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const publicacion = require('../models/Publicacion');
-
+const magicNumber = -1;
 
 //Ruta de get info
 router.get('/', async (req, res) =>{ 
 
     try{
-        const arraypublicacionesDB = await publicacion.find().sort({updatedAt: -1})
+        const arraypublicacionesDB = await publicacion.find().sort({updatedAt: magicNumber})
 
          res.render("publicacion", {
             arrayPublicaciones : arraypublicacionesDB
