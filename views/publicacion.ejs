@@ -11,11 +11,11 @@
                 </form>
             </div>
             <div class="create-post-publicacion sort-by">
-                <button onclick="sortOldest()"><i class="fa-solid fa-person-cane"></i> Older</button>
-                <button onclick="sortNewest()"><i class="fa-solid fa-rocket"></i> Newest</button>
+                <button onclick="Older()"><i class="fa-solid fa-person-cane"></i> Older</button>
+                <button onclick="Newest()"><i class="fa-solid fa-rocket"></i> Newest</button>
                 <button><i class="fa-solid fa-heart"></i> Most liked</button>
             </div>
-            <article>
+            <article id="arrayPubli">
                      <% if (arrayPublicaciones.length > 0) { %>
                         <% arrayPublicaciones.forEach(publicacion => { %>
                             <div class="post">
@@ -47,6 +47,5 @@
 
         <script>
 
-            
 
         </script>
