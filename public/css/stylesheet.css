@@ -158,6 +158,11 @@ body{
     border: 2px solid #1A1B1A;
 }
 .sort-by{
+    margin: 1rem 0 1rem 0;
+    border-radius: 10px;
+    border: 2px solid gray;
+    padding: 1rem;
+    background-color: #1A1B1A;
     display: flex;
     justify-content: space-around;
 }

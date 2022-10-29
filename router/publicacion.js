@@ -17,6 +17,19 @@ router.get('/', async (req, res) =>{
     }
 })
 
+router.get('/old', async (req, res) =>{ 
+
+    try{
+        const arraypublicacionesDB = await publicacion.find().sort({updatedAt: 1})
+
+         res.render("publicacion", {
+            arrayPublicaciones : arraypublicacionesDB
+    })
+    } catch(error){
+        console.log(error)
+    }
+})
+
 //Create
 router.get('/create', (req, res) => {
     res.render("create")
