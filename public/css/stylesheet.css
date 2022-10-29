@@ -1,13 +1,22 @@
+/* Root */
+:root{
+    --body-color: rgb(3, 3, 3);
+    --main-bg-color: #1A1B1A;
+    --white-color: snow;
+    --secondary-black-color: #111;
+    --gray-border: gray;
+    --button-background: #1A1B1A;
+}
 /* General config */
 body{
     margin: 0;
     font-family: monospace;
-    color: rgb(223, 223, 223);
-    background-color: rgb(3, 3, 3);
+    color: var(--white-color);
+    background-color: var(--body-color);
 } 
 /* Navbar */
 .navbar{
-    background-color: #111;
+    background-color: var(--secondary-black-color);
     display: flex;
     justify-content: space-between;
     height: 55px;
@@ -25,12 +34,12 @@ body{
     margin: 8px 15px 0;
     text-decoration: none;
     border-radius: 5px;
-    color: rgb(68, 68, 68);
+    color: var(--gray-border);
     border: 0.2px solid transparent;
     transition: all 0.5s ;
 }
 .navbar .username-pic:hover{
-    border: 0.2px solid rgb(68, 68, 68);
+    border: 0.2px solid var(--gray-border);
 }
 .navbar .username-pic img{ 
     width: 25px;
@@ -51,7 +60,7 @@ body{
     display: inline;
     vertical-align: top;
     text-decoration: none;
-    color: rgb(223, 223, 223);
+    color: var(--gray-border);
 }
 .navbar .tituls h2{
     font-size: 18px;
@@ -64,11 +73,11 @@ body{
     right: 20px;
     top: 60px;
     border-radius: 15px;
-    background-color: #111;
+    background-color: var(--secondary-black-color);
     transition: 0.5s all;
 }
 .show-on-touch input{
-    background-color: #111;
+    background-color: var(--secondary-black-color);
     outline: none;
     padding: 5px;
     border-radius: 5px;
@@ -87,7 +96,7 @@ body{
     margin: 1rem 0 1rem 0;
     padding: 1rem;
     width: 600px;
-    background-color: #1A1B1A;
+    background-color: var(--main-bg-color);
     border: 2px solid gray;
     border-radius: 15px;
     transition: 0.5s all;
@@ -97,7 +106,7 @@ body{
     height: 30px;
     border: none;
     outline: none;
-    background-color: rgb(3, 3, 3);
+    background-color: var(--body-color);
     color: snow;
 }
 .create-post :nth-child(4){
@@ -118,11 +127,11 @@ body{
     width: 35%;
     height: 30px;
     border: none;
-    background-color: gray;
+    background-color: var(--gray-border);
     border-radius: 5px;
 }
 .submit a {
-    color: snow;
+    color: var(--white-color);
     text-decoration: none;
 }
 .container{
@@ -137,32 +146,32 @@ body{
     padding: 1rem;
     width: 630px;
     max-width: 630px;
-    background-color: #1A1B1A;
+    background-color: var(--main-bg-color);
     border: 2px solid gray;
     border-radius: 5px;
     transition: 0.5s all;
 }
 .sort-by button{
-    background-color: #1A1B1A;
-    color: gray;
+    background-color:var(--button-background);
+    color: var(--gray-border);
     cursor: pointer;
     font-weight: 700;
-    border: 2px solid gray;
+    border: 2px solid var(--gray-border);
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 25px;
     transition: 0.5s all;
 }
 .sort-by button:hover{
-    background-color: gray;
-    color: #1A1B1A;
-    border: 2px solid #1A1B1A;
+    background-color: var(--gray-border);
+    color: var(--main-bg-color);
+    border: 2px solid var(--main-bg-color);
 }
 .sort-by{
     margin: 1rem 0 1rem 0;
     border-radius: 10px;
-    border: 2px solid gray;
+    border: 2px solid var(--gray-border);
     padding: 1rem;
-    background-color: #1A1B1A;
+    background-color: var(--main-bg-color);
     display: flex;
     justify-content: space-around;
 }
@@ -179,7 +188,7 @@ body{
     outline: none;
     padding: 0.2rem;
     width: 70%;
-    border: 2px solid gray;
+    border: 2px solid var(--gray-border);
     background-color: #303030;
     border-radius: 15px;
 }
@@ -191,36 +200,36 @@ body{
 }
 .post{
     text-align: left;
-    background: #1A1B1A;
+    background: var(--main-bg-color);
     width: 600px;
     max-width: 600px;
     min-height: 100px;
     padding: 1rem 2rem;
-    border: 2px solid gray;
+    border: 2px solid var(--gray-border);
     border-radius: 16px;
     transition: 0.5s all;
 
 }
 .post button{
-    background-color: #1A1B1A;
+    background-color: var(--main-bg-color);
     cursor: pointer;
     font-weight: 700;
-    border: 2px solid gray;
+    border: 2px solid var(--gray-border);
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 5px;
     transition: 0.5s all;
 }
 .post button a{
     text-decoration: none;
-    color: gray;
+    color: var(--gray-border);
 }
 .post button:hover{
-    background-color: gray;
-    color: #1A1B1A;
-    border: 2px solid #1A1B1A;
+    background-color: var(--gray-border);
+    color: var(--main-bg-color);
+    border: 2px solid var(--main-bg-color);
 }
 .post button:hover a{
-    color: #1A1B1A;
+    color: var(--main-bg-color);
 }
 .descr{
     max-width: 500px;
@@ -238,26 +247,26 @@ body{
     justify-content: center;
 }
 .container-details button{
-    background-color: #1A1B1A;
-    color: gray;
+    background-color:var(--button-background);
+    color: var(--gray-border);
     cursor: pointer;
     font-weight: 700;
-    border: 2px solid gray;
+    border: 2px solid var(--gray-border);
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 3px;
     transition: 0.5s all;
 }
 .container-details button:hover{
-    background-color: gray;
-    color: #1A1B1A;
-    border: 2px solid #1A1B1A;
+    background-color: var(--gray-border);
+    color: var(--main-bg-color);
+    border: 2px solid var(--main-bg-color);
 }
 .container-details button a{
-    color: gray;
+    color: var(--gray-border);
     text-decoration: none;
 }
 .container-details button:hover a{
-    color: #1A1B1A;
+    color: var(--main-bg-color);
 }
 .btnEdit, #btnDelete{
     width: 15%;
