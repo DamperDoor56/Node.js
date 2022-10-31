@@ -1,26 +1,4 @@
 {
-  "name": "node",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app",
-    "dev": "nodemon app"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.0",
-    "body-parser": "^1.20.0",
-    "connect-timeout": "^1.9.0",
-    "cowsay": "^1.5.0",
-    "dotenv": "^16.0.2",
-    "ejs": "^3.1.8",
-    "express": "^4.18.2",
-    "mongoose": "^6.6.1",
-    "node": "^18.10.0",
-    "nodemon": "^2.0.20",
-    "npm": "^8.19.2"
-  }
+  "name": "Node.js",
+  "packageManager": "yarn@3.2.4"
 }
