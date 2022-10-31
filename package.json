@@ -1,4 +1,16 @@
 {
-  "name": "Node.js",
-  "packageManager": "yarn@3.2.4"
+  "name": "deddit-forum-render",
+  "packageManager": "yarn@3.2.4",
+  "main": "app.js",
+  "license": "MIT",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "build": "echo 'Building'",
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "express": "^4..17.1"
+  }
 }
