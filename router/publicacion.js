@@ -54,14 +54,14 @@ router.get('/:id', async(req, res) =>{
     try{
         const publicacionDB = await publicacion.findOne({ _id: id })
 
-        res.render('details',{
+        res.render('details', {
             publicacion: publicacionDB,
             error: false
         })
     }
     catch(error){
         console.log(error)
-        res.render('details',{
+        res.render('details', {
             error: true,
             message: "No se encuentra el id"
         })
